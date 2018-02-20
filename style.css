@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  background-color: #F9F9F9;
+  font-family: sans-serif;
+}
+
+textarea {
+  resize: none;
+  float: left;
+  width: 85%;
+  height: 50px;
+  border: 1px solid rgba(192,192,192, 0.5)
+}
+
+.left_menu {
+  color: grey;
+  left: 0;
+  top: 0;
+  padding: 0 25px 0 25px;
+  height: 100vh;
+  width: auto;
+  background-color: #2b2f3e;
+  border: 1px solid #000;
+  float: left;
+}
+
+.left_menu h1 {
+  color: #fff;
+}
+
+.items h1 {
+  padding-left: 10px;
+  color: grey;
+}
+
+.items {
+  padding: 10px;
+  margin-left: 40px;
+  margin-top: 40px;
+  min-width: 30vw;
+  border: 2px solid rgba(192,192,192, 0.5);
+  box-shadow:1px 1px 1px 0px rgba(192,192,192, 0.7);
+  background-color: #fff;
+  float: left;
+  min-height: 60vh;
+}
+
+.av {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  background-color: rgba(192,192,192, 0.5);
+  float: left;
+}
+
+.items input {
+  margin-left: 10px;
+  height: 31px;
+  width: 60%;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgba(192,192,192, 0.5);
+  padding: 2px;
+}
+
+#addItem {
+  user-select: none;
+  cursor: default;
+  border-radius: 4px;
+  background-color: #27CCC0;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 10px;
+  height: 35px;
+  width: 30%;
+  float: right;
+}
+
+#addItem:hover {
+  box-shadow:5px 5px 50px 0px #33e0d3 inset;
+}
+
+#addItem:active {
+  box-shadow:5px 5px 50px 0px #198c83 inset;
+}
+
+.comments {
+  padding: 10px 20px 10px 20px;
+  min-width: 35vw;
+  margin-left: 40px;
+  margin-top: 40px;
+  background-color:  #fff;
+  border: 2px solid rgba(192,192,192, 0.5);
+  box-shadow:1px 1px 1px 0px rgba(192,192,192, 0.7);
+  float: left;
+}
+
+.comments h1 {
+  color: grey;
+}
+
+.counter {
+  overflow: hidden;
+  user-select: none;
+  background-color: #27CCC0;
+  color: #fff;
+  border-radius: 40%;
+  float: left;
+  padding: 4px 10px 4px 10px;
+  margin: 12px 40px;
+}
+.name {
+  overflow: hidden;
+  float: left;
+  line-height: 50px;
+  margin: 0 5px;
+}
+
+.remove {
+  float: right;
+  user-select: none;
+  border: 1px solid red;
+  padding: 0 20px;
+  color: red;
+  margin-top: 9px;
+  display: inline;
+  border-radius: 3px;
+  line-height: 30px;
+
+}
+
+.remove:hover {
+  box-shadow:5px 5px 50px 0px #ff6666 inset;
+}
+.remove:active {
+  box-shadow:5px 5px 50px 0px #fff inset;
+}
+
+
+ul {
+  padding: 0;
+}
+
+.item {
+  list-style-type: none;
+  border-bottom: 1px solid rgba(192,192,192, 0.7);
+  height: 50px;
+  padding: 0;
+}
+
+.active {
+  border-left: 2px solid red;
+}
+
+.comment {
+  overflow: hidden;
+  list-style-type: none;
+  border-top: 1px solid rgba(192,192,192, 0.7);
+  padding: auto;
+  width: 30vw;
+}
+.box1 {
+  background-color: #FF8A00;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  float: left;
+}
+
+.box2 {
+  background-color: #47568C;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  float: left;
+}

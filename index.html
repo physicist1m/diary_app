@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="diaryApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Diary App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+</head>
+<body ng-controller="diaryController">
+  <div class="left_menu col-md-3 row-md-12">
+    <h1>DIARY APP</h1>
+    <p>Comment with no sense</p>
+  </div>
+  <div class="container col-md-9">
+    <div class="items">
+      <h1>Items</h1>
+      <input id="itemName" type="text" ng-model="task" placeholder="Type name here..." />
+      <div id="addItem" ng-click="addItem()">Add New</div>
+      <br>
+      <ul>
+        <li class="item" ng-repeat="item in $storage.items track by $index" ng-click="activate($event)" id="item{{$storage.items.indexOf(item)}}">
+          <p class="name">{{item}}</p>
+          <div class="counter">{{$storage.comments[$storage.items.indexOf(item)].length}}</div>
+          <div class="remove" ng-click="remove($event)" id="remove{{$storage.items.indexOf(item)}}">Delete</div>
+        </li>
+      </ul>
+    </div>
+    <div class="comments">
+      <h1>Comments #{{activeId}}</h1>
+        <ul>
+          <li class="comment" ng-repeat="comm in $storage.comments[activeId-1] track by $index" id="comm{{$storage.comments[activeId-1].indexOf(comm)}}">
+            <div id="box{{$storage.comments[activeId-1].indexOf(comm)}}"></div>
+            <p>{{comm}}</p>
+          </li>
+        </ul>
+      <div class="av"></div>
+      <textarea id="commInp" ng-model="myComment" ng-keydown="addComment($event)"></textarea>
+    </div>
+  </div>
+</body>
+</html>
